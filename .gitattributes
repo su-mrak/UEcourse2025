@@ -1,0 +1,29 @@
+gitattributes
+# Default behavior for all files (use LF line endings)
+* text=auto
+
+# Unreal Engine Binary Assets - Track with LFS
+*.uasset filter=lfs diff=lfs merge=lfs -text
+*.umap filter=lfs diff=lfs merge=lfs -text
+
+# Optionally, add other binary types used by UE
+# *.png filter=lfs diff=lfs merge=lfs -text
+# *.wav filter=lfs diff=lfs merge=lfs -text
+# *.fbx filter=lfs diff=lfs merge=lfs -text
+
+# Unreal Engine generated files (should not be versioned)
+Saved/ linguist-generated=true
+Intermediate/ linguist-generated=true
+Binaries/ linguist-generated=true
+Build/ linguist-generated=true
+DerivedDataCache/ linguist-generated=true
+.vs/ linguist-generated=true
+*.VC.db linguist-generated=true
+*.opendb linguist-generated=true
+
+# Ensure important text files are treated as text
+*.uproject text
+*.ini text
+*.h text
+*.cpp text
+*.cs text
